@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Fraunces:opsz,wght@9..144,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kumbh+Sans:wght@100..900&family=League+Spartan:wght@100..900&family=Lexend+Deca:wght@100..900&family=Outfit:wght@100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap"
+    rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+
+  <title>Frontend Mentor | Social proof section</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: League Spartan;
+      height: 100vh;
+      Font-size: 15px;
+      background-image: url(./images/bg-pattern-top-desktop.svg), url(./images/bg-pattern-bottom-desktop.svg);
+      background-repeat: no-repeat;
+      background-position: left 0, right 0 bottom 0;
+
+    }
+
+    section {
+      width: 1100px;
+    }
+
+    .main {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .main .hero {
+      width: 45%;
+    }
+
+    .main .hero h3 {
+      font-size: 3.5rem;
+      color: hsl(300, 43%, 22%);
+      margin: 20px 0;
+    }
+
+    .main .hero p {
+      color: hsla(300, 43%, 22%, 70%);
+      line-height: 30px;
+      font-size: 20px;
+      margin: 0;
+    }
+
+    .main .reviews {
+      width: 50%;
+      margin-top: 50px;
+    }
+
+    .main .reviews .align {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      height: 100%;
+
+    }
+
+    .main .reviews .align .first {
+      align-self: start;
+    }
+
+    .main .reviews .align .second {
+      align-self: center;
+
+    }
+
+    .main .reviews .align .third {
+      align-self: flex-end;
+
+    }
+
+    .main ul {
+      list-style: none;
+      display: flex;
+      gap: 10px;
+      background-color: hsl(300, 24%, 96%);
+      border-radius: 10px;
+      align-items: center;
+      padding: 0;
+      margin: 0;
+      width: 80%;
+    }
+
+    .main ul li {
+      margin: 5px 20px;
+    }
+
+    .main ul li img {
+      margin: 2px;
+    }
+
+    .main ul li h3 {
+      color: hsl(300, 43%, 22%);
+    }
+
+    .testimonials {
+      display: flex;
+      justify-content: space-between;
+      gap: 25px;
+      margin-top: 50px;
+      height: 300px;
+    }
+
+    .testimonials>div {
+      background-color: hsl(300, 43%, 22%);
+      border-radius: 10px;
+      color: white;
+
+    }
+    .first{
+      align-self: start;
+    }
+    .second{
+      align-self: center;
+    }
+    .third{
+      align-self: flex-end;
+    }
+
+    .card {
+      margin: 50px 30px;
+      color: hsl(300, 24%, 96%);
+    }
+    
+
+    .card ul {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .card ul li * {
+      margin: 0;
+    }
+
+    .card ul li h3 {
+      margin: 5px 0;
+    }
+
+    .card ul img {
+      height: 40px;
+      border-radius: 50%;
+    }
+
+    .card ul li p {
+      font-size: 18px;
+      color: hsl(333, 80%, 67%);
+    }
+
+    .card>p {
+      line-height: 20px;
+      color: hsla(300, 24%, 96%, 80%);
+      font-size: 18px;
+      margin: 20px 0;
+    }
+    @media (max-width:900px) {
+      body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: League Spartan;
+      Font-size: 15px;
+      background-image: url(./images/bg-pattern-top-mobile.svg), url(./images/bg-pattern-bottom-desktop.svg);
+      background-repeat: no-repeat;
+      background-position: left 0, right 0 ;
+
+    }
+      section {
+      width: 600px;
+    }
+    .main {
+      margin-top: 100px;
+    }
+    .main .hero {
+      width: 50%;
+    }
+
+    .main .hero h3 {
+      font-size: 3rem;
+      margin: 0;
+    }
+
+    .main .hero p {
+      color: hsla(300, 43%, 22%, 70%);
+      font-size: 18px;
+    }
+
+    .main .reviews {
+      width: 50%;
+      margin-top: 0px;
+      gap: 0;
+    }
+
+    .main .reviews .align {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      height: 100%;
+
+    }
+    .main .reviews .align .first{
+      align-self: flex-end;
+    }
+    .main .reviews .align .second{
+      align-self: flex-end;
+    }
+    .main ul {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0;
+    }
+    .main ul li {
+      margin-top: 15px;
+    }
+
+    .main ul li img {
+      margin: 0px ;
+    }
+
+    .main ul li h3 {
+      margin: 0;
+    }
+    .testimonials {
+      display: flex;
+      justify-content: space-between;
+      gap: 25px;
+      margin-top: 50px;
+      height: 300px;
+      flex-wrap: wrap;
+    }
+    }
+    @media (max-width:600px) {
+      body {
+      height: 100%;
+      background-image: url(./images/bg-pattern-top-desktop.svg), url(./images/bg-pattern-bottom-desktop.svg);
+      background-repeat: no-repeat;
+      background-position: left 0, right 0 bottom 0;
+      text-align: center;
+
+    }
+
+    section {
+      width: 345px;
+    }
+
+    .main {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 20px;
+      margin-top: 50px;
+    }
+
+    .main .hero {
+      width: 100%;
+    }
+
+    .main .hero h3 {
+      font-size: 2.5rem;
+      color: hsl(300, 43%, 22%);
+      margin: 0;
+    }
+
+    .main .hero p {
+      color: hsla(300, 43%, 22%, 70%);
+      line-height: 30px;
+      font-size: 20px;
+      margin: 0;
+    }
+
+    .main .reviews {
+      width: 100%;
+      margin-top: 50px;
+    }
+
+    .main .reviews .align {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      height: 100%;
+
+    }
+
+    .main .reviews .align>ul{
+      align-self: center;
+    }
+
+    .main ul {
+      list-style: none;
+      display: flex;
+      gap: 10px;
+      background-color: hsl(300, 24%, 96%);
+      border-radius: 10px;
+      align-items: center;
+      padding: 0;
+      margin: 0;
+      width: 100%;
+    }
+
+    
+    }
+
+  </style>
+</head>
+
+<body>
+  <section>
+    <div class="main">
+      <div class="hero">
+        <h3>10,000+ of our users love our products.</h3>
+        <p>
+          We only provide great products combined with excellent customer
+          service.See what our satisfied customers are
+          saying about our services.
+        </p>
+      </div>
+      <div class="reviews">
+        <div class="align">
+          <ul class="first">
+            <li>
+              <img src="./images/icon-star.svg" alt>
+              <img src="./images/icon-star.svg" alt>
+              <img src="./images/icon-star.svg" alt>
+              <img src="./images/icon-star.svg" alt>
+              <img src="./images/icon-star.svg" alt>
+            </li>
+            <li>
+              <h3>Rated 5 Stars in Reviews</h3>
+            </li>
+          </ul>
+          <ul class="second">
+            <li>
+              <img src="./images/icon-star.svg" alt>
+              <img src="./images/icon-star.svg" alt>
+              <img src="./images/icon-star.svg" alt>
+              <img src="./images/icon-star.svg" alt>
+              <img src="./images/icon-star.svg" alt>
+            </li>
+            <li>
+              <h3>Rated 5 Stars in Report Guru</h3>
+            </li>
+          </ul>
+          <ul class="third">
+            <li>
+              <img src="./images/icon-star.svg" alt>
+              <img src="./images/icon-star.svg" alt>
+              <img src="./images/icon-star.svg" alt>
+              <img src="./images/icon-star.svg" alt>
+              <img src="./images/icon-star.svg" alt>
+            </li>
+            <li>
+              <h3>Rated 5 Stars in BestTech</h3>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="testimonials">
+      <div class="profile first">
+        <div class="card ">
+          <ul>
+            <li>
+              <img src="./images/./image-colton.jpg" alt>
+            </li>
+            <li>
+              <h3>Colton Smith</h3>
+              <p>Verified Buyer</p>
+            </li>
+          </ul>
+          <p>
+            "We needed the same printed design as the one we had ordered a
+            week
+            prior. Not only did they find the original
+            order, but we also received it in time.Excellent!"
+          </p>
+        </div>
+      </div>
+      <div class="profile second">
+        <div class="card ">
+          <ul>
+            <li>
+              <img src="./images/./image-irene.jpg" alt>
+            </li>
+            <li>
+              <h3>Irene Roberts</h3>
+              <p>Verified Buyer</p>
+            </li>
+          </ul>
+          <p>"Customer service is always excellent and very quick turn around. Completely delighted with the simplicity
+            ofthe purchase and the speed of delivery."</p>
+        </div>
+      </div>
+      <div class="profile third">
+        <div class="card ">
+          <ul>
+            <li>
+              <img src="./images/./image-anne.jpg" alt>
+            </li>
+            <li>
+              <h3>Anne Wallace</h3>
+              <p>Verified Buyer</p>
+            </li>
+          </ul>
+          <p>"Put an order with this company and can only praise them for
+            thevery highstandard. Will definitely use them
+            again
+            and recommend them to everyone!"</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--
+    10,000+ of our users love our products.
+
+    We only provide great products combined with excellent customer service.
+    See what our satisfied customers are saying about our services.
+    
+    Rated 5 Stars in Reviews
+    Rated 5 Stars in Report Guru
+    Rated 5 Stars in BestTech
+    
+    Colton Smith 
+    Verified Buyer
+    "We needed the same printed design as the one we had ordered a week prior.
+    Not only did they find the original order, but we also received it in time.
+    Excellent!"
+    
+    Irene Roberts 
+    Verified Buyer
+    "Customer service is always excellent and very quick turn around. Completely
+    delighted with the simplicity of the purchase and the speed of delivery."
+    
+    Anne Wallace 
+    Verified Buyer
+    "Put an order with this company and can only praise them for the very high
+    standard. Will definitely use them again and recommend them to everyone!"
+-->
+
+</body>
+
+</html>
